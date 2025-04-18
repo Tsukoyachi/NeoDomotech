@@ -1,5 +1,4 @@
 <mat-sidenav-container class="h-screen bg-gray-50">
-  <!-- Side Nav -->
   <mat-sidenav #drawer mode="over" class="w-64 bg-white shadow-lg">
     <div class="p-6 flex flex-col gap-4 text-lg items-center">
       <a
@@ -29,7 +28,6 @@
     </div>
   </mat-sidenav>
 
-  <!-- Toolbar -->
   <mat-toolbar class="drop-shadow-md flex justify-between bg-white">
     <h1 class="md:pl-10 text-2xl font-bold text-gray-800">
       <a routerLink="/" class="hover:text-indigo-600 transition">NeoDomotech</a>
@@ -69,7 +67,6 @@
     </div>
   </mat-toolbar>
 
-  <!-- Main Content -->
   <div class="p-8">
     <router-outlet></router-outlet>
   </div>
