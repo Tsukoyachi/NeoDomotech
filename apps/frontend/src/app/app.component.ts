@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component } from "@angular/core";
+import { RouterModule } from "@angular/router";
+import { HeaderComponent } from "../libs/header/header.component";
 
 @Component({
-  imports: [RouterModule],
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  imports: [RouterModule, HeaderComponent],
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrl: "./app.component.scss",
 })
 export class AppComponent {
-  title = 'frontend';
+  title = "frontend";
 }
