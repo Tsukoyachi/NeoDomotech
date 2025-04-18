@@ -1,2 +1,76 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<mat-sidenav-container class="h-screen bg-gray-50">
+  <!-- Side Nav -->
+  <mat-sidenav #drawer mode="over" class="w-64 bg-white shadow-lg">
+    <div class="p-6 flex flex-col gap-4 text-lg items-center">
+      <a
+        routerLink="/dashboard"
+        routerLinkActive="text-indigo-600 font-semibold"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="px-4 py-2 rounded-xl hover:bg-gray-100 w-full text-center transition"
+      >
+        Dashboard
+      </a>
+      <a
+        routerLink="/devices"
+        routerLinkActive="text-indigo-600 font-semibold"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="px-4 py-2 rounded-xl hover:bg-gray-100 w-full text-center transition"
+      >
+        Devices
+      </a>
+      <a
+        routerLink="/workflows"
+        routerLinkActive="text-indigo-600 font-semibold"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="px-4 py-2 rounded-xl hover:bg-gray-100 w-full text-center transition"
+      >
+        Workflows
+      </a>
+    </div>
+  </mat-sidenav>
+
+  <!-- Toolbar -->
+  <mat-toolbar class="drop-shadow-md flex justify-between bg-white">
+    <h1 class="md:pl-10 text-2xl font-bold text-gray-800">
+      <a routerLink="/" class="hover:text-indigo-600 transition">NeoDomotech</a>
+    </h1>
+
+    <div class="hidden md:flex space-x-6 pr-10 text-lg items-center">
+      <a
+        routerLink="/dashboard"
+        routerLinkActive="text-indigo-600 font-semibold"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="hover:text-indigo-600 transition"
+      >
+        Dashboard
+      </a>
+      <a
+        routerLink="/devices"
+        routerLinkActive="text-indigo-600 font-semibold"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="hover:text-indigo-600 transition"
+      >
+        Devices
+      </a>
+      <a
+        routerLink="/workflows"
+        routerLinkActive="text-indigo-600 font-semibold"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="hover:text-indigo-600 transition"
+      >
+        Workflows
+      </a>
+    </div>
+
+    <div class="md:hidden">
+      <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar>
+
+  <!-- Main Content -->
+  <div class="p-8">
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>
